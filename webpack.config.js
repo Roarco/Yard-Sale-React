@@ -21,7 +21,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-
+  mode: 'development',
   /*ahora vamos a crear un modulo con las reglas necesarias para el proyecto, para que los archivos sean leidos
     debemos recordar que hay que implementar expresiones regulares.
     */
