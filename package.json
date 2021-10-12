@@ -1,0 +1,29 @@
+{
+  "name": "yard-sale",
+  "version": "1.0.0",
+  "description": "Implementando proyecto desarrollado en el curso practico de frontend developer con React js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "JavaScript",
+    "Babel",
+    "Webpack"
+  ],
+  "author": "Roberth Arrieta Contreras <sebuscaroberth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roarco/Yard-Sale-React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Roarco/Yard-Sale-React/issues"
+  },
+  "homepage": "https://github.com/Roarco/Yard-Sale-React#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
