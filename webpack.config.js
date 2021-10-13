@@ -15,6 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
+    publicPath: '/',
   },
 
   /* aqui vamos a resolver las extenciones que vamos a utilizar para el proyecto*/
@@ -64,5 +65,8 @@ module.exports = {
       filename: 'assets/styles/[name].css',
     }),
   ],
+  devServer: {
+    historyApiFallback: true,
+  },
 
 };
