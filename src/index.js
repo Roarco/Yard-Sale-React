@@ -3,7 +3,8 @@ componetes o archivos que requiera nuesta aplicacion.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './container/App';
+import App from './components/App';
+/* import Login from "./container/Login" */
 
 /* con ReactDOM.render empujamos el componente al html */
 ReactDOM.render(<App />, document.getElementById('app'));

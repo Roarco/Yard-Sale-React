@@ -8,11 +8,15 @@ para  asi tener un contenedor principal con cada,
 uno de ellos
 */
 import React from 'react';
-import '../styles/App.scss';
+import Layout from '../container/Layout';
+import Login from '../container/Login';
+import '../styles/Global.scss';
 
 const App = () => {
   return (
-    <h1>Ya estamos aqui</h1>
+    <Layout>
+      <Login />
+    </Layout>
   );
 };
 
