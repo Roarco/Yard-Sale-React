@@ -8,6 +8,7 @@ para  asi tener un contenedor principal con cada,
 uno de ellos
 */
 import React from 'react';
+import '../styles/App.scss';
 
 const App = () => {
   return (
