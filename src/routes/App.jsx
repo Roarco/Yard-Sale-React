@@ -10,8 +10,8 @@ uno de ellos
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from '../container/Layout';
-import Login from '../container/Login';
-import RecoveryPassword from '../container/RecoveryPassword';
+import Login from '../pages/Login';
+import SendEmail from '../pages/SendEmail';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import '../styles/Global.scss';
@@ -20,12 +20,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Layout>
-      <Switch>
+        <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
-          <Route exact path='/recovery-password' component={RecoveryPassword} />
+          <Route exact path='/send-email' component={SendEmail} />
           <Route component={NotFound} />
-      </Switch>
+        </Switch>
       </Layout>
     </BrowserRouter>
   );
