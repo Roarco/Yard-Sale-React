@@ -1,12 +1,17 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/Header.scss';
+import '@styles/Header.scss';
+
+import menu from '@icons/icon_menu.svg';
+import logo from '@logos/logo_yard_sale.svg';
+import cart from '@icons/icon_shopping_cart_notification.svg';
 
 const Header = () => {
   return (
     <nav className='navbar'>
-      <img src='../assets/icons/icon_menu.svg' alt='menu' className='menu' />
+      <img src={menu} alt='menu' className='menu' />
       <div className='navbar-left'>
-        <img src='../assets/logos/logo_yard_sale.svg' alt='logo' className='logo' />
+        <img src={logo} alt='logo' className='navbar-lef-logo' />
         <ul>
           <li><a href='/'>All</a></li>
           <li><a href='/'>Clothes</a></li>
@@ -20,7 +25,7 @@ const Header = () => {
         <ul>
           <li>camilayakoo@gmail.com</li>
           <li className='navbar-shopping-cart'>
-            <img src='../assets/icons/icon_shopping_cart_notification.svg' alt='cart' />
+            <img src={cart} alt='cart' />
             <div>20</div>
           </li>
         </ul>

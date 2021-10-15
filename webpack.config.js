@@ -22,6 +22,14 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@container': path.resolve(__dirname, 'src/container/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+      '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+    },
   },
   mode: 'development',
   /*ahora vamos a crear un modulo con las reglas necesarias para el proyecto, para que los archivos sean leidos
@@ -51,6 +59,10 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|gif|jpg|svg)$/,
+        type: 'asset',
       },
     ],
   },

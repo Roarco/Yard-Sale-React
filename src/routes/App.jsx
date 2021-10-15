@@ -29,7 +29,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
-          <Route exact path='/password-recovey' component={PasswordRecovery} />
+          <Route exact path='/password-recovery' component={PasswordRecovery} />
           <Route exact path='/send-email' component={SendEmail} />
           <Route exact path='/new-password' component={NewPassword} />
           <Route exact path='/account' component={MyAccount} />
