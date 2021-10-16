@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     height: 48px;
-    border-bottom: 1px solid var(--text-input-field);
+    border-bottom: 1px solid var(--very-ligth-pink);
 }
 .menu {
     display: none;
@@ -42,6 +42,7 @@
 }
 .navbar-rigth ul li{
     list-style: none;
+    cursor: pointer;
     margin-right: 20px;
     font-size: var(--sm);
     font-weight: 100;
