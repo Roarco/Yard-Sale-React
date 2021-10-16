@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/button-has-type */
 import React from 'react';
+import arrow from '@icons/flechita.svg';
 import OrderItem from '../components/OrderItem';
 import '../styles/MyOrder.scss';
 
@@ -7,7 +9,7 @@ const MyOrder = () => {
   return (
     <aside className='MyOrder'>
       <div className='title-container'>
-        <img src='./icons/flechita.svg' alt='arrow' />
+        <img src={arrow} alt='arrow' />
         <p className='title'>My order</p>
       </div>
       <div className='my-order-content'>
