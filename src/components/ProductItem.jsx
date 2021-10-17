@@ -1,27 +1,24 @@
 /* eslint-disable import/no-unresolved */
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/ProductItem.scss';
 
 import add from '@icons/bt_add_to_cart.svg';
 
-const ProductItem = () => {
-  const [cart, setCart] = useState('');
-
-  const handleClick = () => {
-    setCart('Hola Roberth');
-  };
+const ProductItem = ({ product }) => {
   return (
     <div className='ProductItem'>
-      <img src='https://cdn.pixabay.com/photo/2014/05/02/23/53/shed-336505_960_720.jpg' alt='bike' />
+      <img src={product.images[0]} alt={product.title} />
       <div className='product-info'>
         <div>
-          <p>$120,00</p>
-          <p>Bike</p>
+          <p>
+            {'$ '}
+            {product.price}
+          </p>
+          <p>{product.title}</p>
         </div>
-        <figure onClick={handleClick}>
+        <figure>
           <img src={add} alt='add' />
         </figure>
-        {cart}
       </div>
     </div>
 
