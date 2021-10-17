@@ -1,13 +1,15 @@
 /* eslint-disable import/no-unresolved */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
-import cart from '@icons/icon_shopping_cart_notification.svg';
+import AppContext from '@contex/AppContext';
+import cart from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
   const [toogle, setToogle] = useState(false);
+  const { state } = useContext(AppContext);
 
   const handleToogle = () => {
     setToogle(!toogle);
@@ -31,7 +33,7 @@ const Header = () => {
           <li onClick={handleToogle}>camilayakoo@gmail.com</li>
           <li className='navbar-shopping-cart'>
             <img src={cart} alt='cart' />
-            <div>20</div>
+            {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
