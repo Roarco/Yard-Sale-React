@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
+	background-color: white;
+	top: 49px;
+	bottom: 0;
+	border-radius: 6px;
+	border: 1px solid var(--very-ligth-pink);
 }
 .title-container {
 	display: flex;
@@ -14,9 +19,10 @@
 	transform: rotate(180deg);
 	margin-right: 14px;
 }
-.title {
+.MyOrder-title{
 	font-size: var(--lg);
 	font-weight: bold;
+	margin-bottom: 18px;
 }
 .order {
 	display: grid;
