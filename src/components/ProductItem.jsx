@@ -1,10 +1,17 @@
+/* eslint-disable import/order */
 /* eslint-disable import/no-unresolved */
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 import '../styles/ProductItem.scss';
 
 import add from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = ({ product }) => {
+  const { addToCar } = useContext(AppContext);
+
+  const handleClick = (item) => {
+    addToCar(item);
+  };
   return (
     <div className='ProductItem'>
       <img src={product.images[0]} alt={product.title} />
@@ -16,7 +23,7 @@ const ProductItem = ({ product }) => {
           </p>
           <p>{product.title}</p>
         </div>
-        <figure>
+        <figure onClick={() => handleClick(product)}>
           <img src={add} alt='add' />
         </figure>
       </div>
