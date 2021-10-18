@@ -4,6 +4,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssEstractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 /* creamos un nuevo modulo que vamos a exportar con esta configuracion */
 
@@ -33,7 +34,6 @@ module.exports = {
       '@context': path.resolve(__dirname, 'src/context/'),
     },
   },
-  mode: 'development',
   /*ahora vamos a crear un modulo con las reglas necesarias para el proyecto, para que los archivos sean leidos
     debemos recordar que hay que implementar expresiones regulares.
     */
@@ -78,6 +78,7 @@ module.exports = {
     new MiniCssEstractPlugin({
       filename: 'assets/styles/[name].css',
     }),
+    new Dotenv(),
   ],
   devServer: {
     historyApiFallback: true,
