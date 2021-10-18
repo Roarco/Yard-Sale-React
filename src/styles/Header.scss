@@ -2,11 +2,15 @@
 
 .navbar{
     display: flex;
+    width: 100%;
     flex-direction: row;
+    background-color:white;
     align-items: center;
     justify-content: space-between;
     height: 48px;
     border-bottom: 1px solid var(--very-ligth-pink);
+    position: fixed;
+    top: 0;
 }
 .menu {
     display: none;

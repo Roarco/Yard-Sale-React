@@ -1,17 +1,20 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import close from '@icons/icon_close.png';
 import '../styles/OrderItem.scss';
 
-const OrderItem = () => {
+const OrderItem = ({ product }) => {
   return (
     <div className='OrderItem'>
       <figure>
-        <img src='https://cdn.pixabay.com/photo/2014/05/02/23/53/shed-336505_960_720.jpg' alt='bike' />
-        <p>Bike</p>
+        <img src={product.images[0]} alt={product.title} />
+        <p>{product.title}</p>
       </figure>
       <div>
-        <p>$ 120,00</p>
+        <p>
+          ${product.price}
+        </p>
         <img src={close} alt='close' />
       </div>
     </div>
