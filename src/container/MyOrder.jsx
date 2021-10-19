@@ -7,7 +7,8 @@ import OrderItem from '../components/OrderItem';
 import '../styles/MyOrder.scss';
 
 const MyOrder = () => {
-  const { state } = useContext(AppContext);
+
+  const { state, handleToogleOrders } = useContext(AppContext);
 
   const sumTotal = () => {
     const reducer = (acucumulator, currentValue) => acucumulator + currentValue.price;
@@ -18,7 +19,7 @@ const MyOrder = () => {
   return (
     <aside className='MyOrder'>
       <div className='title-container'>
-        <img src={arrow} alt='arrow' />
+        <img src={arrow} alt='arrow' onClick={() => handleToogleOrders()} />
         <p className='MyOrder-title'>My order</p>
       </div>
       <div className='my-order-content'>

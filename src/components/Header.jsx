@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import MyOrder from '@container/MyOrder';
@@ -9,13 +9,8 @@ import AppContext from '@context/AppContext';
 import cart from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
-  const [toogle, setToogle] = useState(false);
-  const [toogleOrders, setToogleOrders] = useState(false);
-  const { state } = useContext(AppContext);
+  const { state, handleToogleMenu, handleToogleOrders } = useContext(AppContext);
 
-  const handleToogle = () => {
-    setToogle(!toogle);
-  };
   return (
     <nav className='navbar'>
       <img src={menu} alt='menu' className='menu' />
@@ -32,15 +27,15 @@ const Header = () => {
       </div>
       <div className='navbar-rigth'>
         <ul>
-          <li onClick={handleToogle}>camilayakoo@gmail.com</li>
-          <li className='navbar-shopping-cart' onClick={() => setToogleOrders(!toogleOrders)}>
+          <li onClick={() => handleToogleMenu()}>camilayakoo@gmail.com</li>
+          <li className='navbar-shopping-cart' onClick={() => handleToogleOrders()}>
             <img src={cart} alt='cart' />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
-      { toogle && <Menu />}
-      { toogleOrders && <MyOrder />}
+      { state.toogleMenu && <Menu />}
+      { state.orderIsOpen && <MyOrder />}
     </nav>
 
   );
