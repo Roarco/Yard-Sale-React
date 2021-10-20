@@ -5,13 +5,14 @@ import AppContext from '../context/AppContext';
 import '../styles/ProductItem.scss';
 
 import add from '@icons/bt_add_to_cart.svg';
+import added from '@icons/bt_added_to_cart.svg';
 
 const ProductItem = ({ product }) => {
-  const { addToCar } = useContext(AppContext);
+  const { state, addToCar, removeFromCart } = useContext(AppContext);
 
-  const handleClick = (item) => {
+  /*  const handleClick = (item) => {
     addToCar(item);
-  };
+  }; */
   return (
     <div className='ProductItem'>
       <img src={product.images[0]} alt={product.title} />
@@ -23,8 +24,8 @@ const ProductItem = ({ product }) => {
           </p>
           <p>{product.title}</p>
         </div>
-        <figure onClick={() => handleClick(product)}>
-          <img src={add} alt='add' />
+        <figure>
+          { state.cart.includes(product) ? <img src={added} alt='added' className='added' onClick={() => removeFromCart(product)} /> : <img src={add} alt='add' onClick={() => addToCar(product)} />}
         </figure>
       </div>
     </div>

@@ -15,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
 
 .product-info div p:nth-child(1){
@@ -35,6 +36,10 @@
     width: 35px;
     height: 35px;
 }
+.product-info .added {
+    width: 40px;
+    height: 40px;
+}
 
 @media (max-width: 640px){
     .ProductItem{
@@ -43,5 +48,16 @@
     .ProductItem img{
         width: 100%;
         height: 140px;
+    }
+    .product-info div p {
+        font-size: 14px;
+    }
+    .product-info figure img {
+        width: 30px;
+        height: 30px;
+    }
+    .product-info .added {
+        width: 37px;
+        height: 37px;
     }
 }
