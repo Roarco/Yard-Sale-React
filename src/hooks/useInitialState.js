@@ -3,6 +3,7 @@ import { useState } from 'react';
 const initialState = {
   cart: [],
   toogleMenu: false,
+  toogleMenuMobile: false,
   orderIsOpen: false,
 };
 
@@ -32,6 +33,13 @@ const useInitialState = () => {
     });
   };
 
+  const handleToogleMenuMobile = () => {
+    setState({
+      ...state,
+      toogleMenuMobile: !state.toogleMenuMobile,
+    });
+  };
+
   const handleToogleOrders = () => {
     setState({
       ...state,
@@ -45,6 +53,7 @@ const useInitialState = () => {
     removeFromCart,
     handleToogleOrders,
     handleToogleMenu,
+    handleToogleMenuMobile,
   };
 };
 

@@ -9,11 +9,11 @@ import AppContext from '@context/AppContext';
 import cart from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
-  const { state, handleToogleMenu, handleToogleOrders } = useContext(AppContext);
+  const { state, handleToogleMenu, handleToogleMenuMobile, handleToogleOrders } = useContext(AppContext);
 
   return (
     <nav className='navbar'>
-      <img src={menu} alt='menu' className='menu' />
+      <img src={menu} alt='menu' className='menu' onClick={() => handleToogleMenuMobile()} />
       <div className='navbar-left'>
         <img src={logo} alt='logo' className='navbar-lef-logo' />
         <ul>
