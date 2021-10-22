@@ -10,7 +10,9 @@ const MenuMobile = () => {
   return (
     <div className='MenuMobile'>
       <div className='categories'>
-        <img src={close} alt='close' className='close' onClick={() => handleToogleMenuMobile()} />
+        <div className='close'>
+          <img src={close} alt='close' onClick={() => handleToogleMenuMobile()} />
+        </div>
         <ul>
           <li><a href='/'>CATEGORIES</a></li>
           <li><a href='/'>All</a></li>
